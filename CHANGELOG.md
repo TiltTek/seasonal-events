@@ -4,6 +4,14 @@ All notable changes to `tilttek/seasonal-events` will be documented in this file
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.1.1-alpha - 2026-11-20
+
+### Fixed
+
+- `Multiplier::apply()` multiplies the hundreds and the rest of an amount apart: an amount whose product with the
+  percent went past `PHP_INT_MAX` while its result fits is multiplied, and one whose result does not fit is refused with
+  `InvalidSeason` rather than failing with a `TypeError`.
+
 ## 0.1.0-alpha - 2026-11-13
 
 ### Added
